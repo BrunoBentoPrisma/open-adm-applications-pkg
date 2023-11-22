@@ -20,9 +20,9 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
       - name: Build
-        run: dotnet build
+        run: dotnet build -c Release -o out
       - name: Generate Package
-        run: dotnet pack -p:PackageVersion=1.0.3
+        run: dotnet pack -c Release -o out -p:PackageVersion=1.0.3
       - name: Publish package
         run: dotnet nuget push application-pkg.1.0.3.nupkg --api-key ${{ secrets.API_KEY }} --source https://api.nuget.org/v3/index.json
       
