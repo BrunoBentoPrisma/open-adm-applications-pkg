@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: dotnet build
       - name: Generate Package
-        run: dotnet pack -p:PachageVersion=1.0.3
+        run: dotnet pack -p:PackageVersion=1.0.3
       - name: Publish package
         run: dotnet nuget push application-pkg.1.0.3.nupkg --api-key ${{ secrets.API_KEY }} --source https://api.nuget.org/v3/index.json
       
