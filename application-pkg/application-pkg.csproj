@@ -5,11 +5,12 @@
     <RootNamespace>application_pkg</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <Version>1.0.1</Version>
+    <Version>$(PachageVersion)</Version>
+	<VersionSuffix>$(VersionSuffix)</VersionSuffix>
     <Authors>Bruno Bento Gonçalves</Authors>
     <Company>Open Adm</Company>
-    <AssemblyVersion>1.0.0.2</AssemblyVersion>
-    <FileVersion>1.0.0.2</FileVersion>
+    <AssemblyVersion></AssemblyVersion>
+    <FileVersion></FileVersion>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
