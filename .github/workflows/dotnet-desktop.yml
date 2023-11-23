@@ -20,7 +20,7 @@ jobs:
       - name: Build
         run: dotnet build --configuration Release
       - name: Create pkg
-        run: dotnet pack -p:PackageVersion=1.0.6
+        run: dotnet pack -p:PackageVersion=1.0.7
         working-directory: ./application-pkg
       - name: Archive Nuget
         uses: actions/upload-artifact@v3
@@ -28,6 +28,6 @@ jobs:
           name: pkg
           path: "**/*.nupkg"
       - name: Publish Nuget
-        run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.API_KEY }} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
           
       
