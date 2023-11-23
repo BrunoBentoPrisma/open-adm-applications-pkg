@@ -28,6 +28,6 @@ jobs:
           name: pkg
           path: "**/*.nupkg"
       - name: Publish Nuget
-        run: dotnet nuget push ./application-pkg/*.nupkg --api-key ${{ secrets.API_KEY }} --source https://api.nuget.org/v3/index.json
+        run: dotnet nuget push **/*.nupkg --api-key ${{ secrets.API_KEY }} --source https://api.nuget.org/v3/index.json
           
       
