@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
       - name: Build
-        run: dotnet build --configuration Release
+        run: dotnet build --configuration Debug
       - name: Create pkg
         run: dotnet pack -p:PachageVersion=1.0.5
         working-directory: ./application-pkg
