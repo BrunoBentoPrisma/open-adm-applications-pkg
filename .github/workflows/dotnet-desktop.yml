@@ -18,9 +18,9 @@ jobs:
       - name: Install dependencies
         run: dotnet restore
       - name: Build
-        run: dotnet build --configuration Debug
+        run: dotnet build --configuration Release
       - name: Create pkg
-        run: dotnet pack -p:PachageVersion=1.0.5
+        run: dotnet pack -p:PackageVersion=1.0.5
         working-directory: ./application-pkg
       - name: Archive Nuget
         uses: actions/upload-artifact@v3
